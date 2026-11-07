@@ -68,6 +68,7 @@ LIMITATION: Subject-independent performance cannot be claimed without subject ID
 Saved: test_data.csv (features plus target)
 
 ## c. GitHub Repository Link
+https://github.com/shivani6809/BEED-EEG-Classification
 
 ## d. Models Used
 1. Logistic Regression
