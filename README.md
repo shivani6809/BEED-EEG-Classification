@@ -77,7 +77,6 @@ Saved: test_data.csv (features plus target)
 5. Support Vector Machine
 
 ### Model Comparison
-### Model Comparison
 
 | ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
 | --- | --- | --- | --- | --- | --- | --- |
