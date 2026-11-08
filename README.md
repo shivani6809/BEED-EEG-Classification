@@ -1,8 +1,6 @@
 # BEED-EEG-Classification
 Comparative evaluation of five machine learning classifiers for EEG-based epilepsy classification using the BEED dataset.
 
-# EEG-Based Epilepsy Classification
-
 ## a. Problem Statement
 This project investigates the classification of EEG
 recordings using five supervised machine learning
@@ -16,56 +14,83 @@ This project is for educational purposes only,
 not clinical diagnosis.
 
 ## b. Dataset Description
-Dataset Name:
-BEED - Bangalore EEG Epilepsy Dataset
-Source:
-UCI Machine Learning Repository
-Dataset URL:
-https://archive.ics.uci.edu/dataset/1134
-DOI:
-https://doi.org/10.24432/C5K33B
-Donation Year: 2025
-Original dataset rows: 8000
-Total dataset columns: 17
-Number of model input features: 16
-Feature names: X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16
-Target: y
-Number of classes: 4
-Target label frequencies:
-y
-0    2000
-1    2000
-2    2000
-3    2000
-Missing values (entire dataset): 0
-Duplicate rows (whole-row matches): 0
-Missing predictor values: 0
-Subject/group identifier used: None available/configured
-NOTE: Duplicate observations were counted, not automatically discarded.
+## Dataset Description
 
-TRAIN/TEST DETAILS
-Split method: Stratified row-level split (NOT patient-independent)
-Train records: 6400
-Test records: 1600
-Train + test = original: True
-Test fraction requested: 0.2
-Random state: 42
-Training target counts:
-y
-2    1600
-1    1600
-3    1600
-0    1600
-Test target counts:
-y
-3    400
-2    400
-1    400
-0    400
-Preprocessing: StandardScaler fitted on training data for LR, KNN and SVM.
-No scaling for Decision Tree or Gaussian Naive Bayes.
-LIMITATION: Subject-independent performance cannot be claimed without subject IDs.
-Saved: test_data.csv (features plus target)
+| Attribute | Value |
+|------------|---------|
+| Dataset Name | BEED - Bangalore EEG Epilepsy Dataset |
+| Source | UCI Machine Learning Repository |
+| Dataset URL | https://archive.ics.uci.edu/dataset/1134 |
+| DOI | https://doi.org/10.24432/C5K33B |
+| Donation Year | 2025 |
+| Original Dataset Rows | 8000 |
+| Total Columns | 17 |
+| Input Features | 16 |
+| Feature Names | X1-X16 |
+| Target Variable | y |
+| Number of Classes | 4 |
+| Missing Values | 0 |
+| Duplicate Rows | 0 |
+| Missing Predictor Values | 0 |
+| Subject Identifier | None available/configured |
+
+### Class Distribution
+
+| Class | Records |
+|---------|---------|
+| 0 | 2000 |
+| 1 | 2000 |
+| 2 | 2000 |
+| 3 | 2000 |
+
+> **Note:** Duplicate observations were counted but not automatically removed.
+
+---
+
+## Train/Test Details
+
+| Attribute | Value |
+|------------|---------|
+| Split Method | Stratified row-level split (Not patient-independent) |
+| Training Records | 6400 |
+| Testing Records | 1600 |
+| Test Fraction | 20% |
+| Random State | 42 |
+| Preprocessing | StandardScaler applied for Logistic Regression, KNN and SVM |
+| No Scaling Applied To | Decision Tree, Gaussian Naive Bayes |
+
+### Training Set Class Distribution
+
+| Class | Records |
+|---------|---------|
+| 0 | 1600 |
+| 1 | 1600 |
+| 2 | 1600 |
+| 3 | 1600 |
+
+### Testing Set Class Distribution
+
+| Class | Records |
+|---------|---------|
+| 0 | 400 |
+| 1 | 400 |
+| 2 | 400 |
+| 3 | 400 |
+
+### Limitation
+
+Subject-independent performance cannot be claimed because no verified subject identifiers were available for participant-level splitting.
+
+### Generated Files
+
+- `test_data.csv`
+- `results.csv`
+- `model/logistic_regression.joblib`
+- `model/decision_tree.joblib`
+- `model/knn.joblib`
+- `model/naive_bayes.joblib`
+- `model/svm.joblib`
+
 
 ## c. GitHub Repository Link
 https://github.com/shivani6809/BEED-EEG-Classification
