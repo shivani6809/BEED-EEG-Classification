@@ -14,7 +14,6 @@ This project is for educational purposes only,
 not clinical diagnosis.
 
 ## b. Dataset Description
-## Dataset Description
 
 | Attribute | Value |
 |------------|---------|
